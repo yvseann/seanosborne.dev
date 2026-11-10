@@ -42,7 +42,6 @@ header {
   width: 100%;
   background: var(--header-colour);
   color: var(--header-text-colour);
-  min-height: 100vh;
   min-height: 100svh;
   user-select: none;
 }
@@ -99,7 +98,7 @@ nav {
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
+  min-height: 100svh;
   width: 100%;
 
   > * {
