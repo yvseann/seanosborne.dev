@@ -1,50 +1,108 @@
+/* Reset to original sizing */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+:root {
+  /* HEADER BACKGROUND BLOB SETTINGS */
+  --blob-radius: 250px;
+  --blue-blob: #1900ff;
+  --purple-blob: #8800ff;
+  --red-blob: #ff0000;
+
+  /* HEADER */
+  --header-content-width: 35vw;
+
+  /* HEADER H1 SETTINGS */
+  --header-colour: #121212;
+  --header-text-colour: white;
+
+  --header-intro-size: 4rem;
+  --header-intro-font: ;
+
+  /* HEADER H1 GRADIENT SPAN SETTINGS */
+  --header-span-direction: to bottom right;
+  --header-span-colourfirst: darkblue;
+  --header-span-coloursecond: cyan;
+
+  /* HEADER PARAGRAPH SETTINGS */
+  --header-paragraph-size: 1.3rem;
+
+  /* HEADER SMALLTEXT SETTINGS */
+  --header-smalltext-size: 0.9rem;
+  --header-smalltext-colour: lightgrey;
+}
+
+/*  Set header background */
 
 header {
-    display: block;
-    width: 100%;
-    background: #121212;
+  display: block;
+  width: 100%;
+  background: var(--header-colour);
+  color: var(--header-text-colour);
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  width: 50vw;
+  position: relative;
+  top: 1vh;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin: 0 auto;
+
+  text-align: center;
+  font-size: 1rem;
+  gap: 1rem;
+
+  a {
+    text-decoration: none;
     color: white;
-    height: 100vh;
+    font-size: 1.2rem;
+  }
 
-    flex-direction: column;
-    flex-wrap: nowrap;
-
-    justify-content: center;
-    align-self: center;
+  img {
+    height: 1.2rem;
+    width: auto;
+  }
 }
 
-.blob {
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.7;
-}
+/* Centre the introduction paragraph */
+#introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-.purple {
-    background: #713bff;
-    top: 10%;
-    left: 15%;
-}
+  height: 100vh;
+  width: 100%;
 
-.blue {
-    background: #167bff;
-    bottom: 10%;
-    right: 15%;
-}
+  > * {
+    width: var(--header-content-width);
+  }
 
-.red {
-    background: #ff0000;
-    bottom: 15%;
-    left: 10%;
-}
+  h1 {
+    font-size: var(--header-intro-size);
 
-.nav {
-    align-items: center;
+    span {
+      background: linear-gradient(var(--header-span-direction), var(--header-span-colourfirst), var(--header-span-coloursecond));
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text; 
+    }
+  }
+
+  p {
+    font-size: var(--header-paragraph-size);
+  }
+
+  #smallText {
+    color: var(--header-smalltext-colour);
+    font-size: var(--header-smalltext-size);
+  }
 }
