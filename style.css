@@ -13,7 +13,7 @@
   --red-blob: #ff0000;
 
   /* HEADER */
-  --header-content-width: 35vw;
+  --header-content-width: 55vw;
 
   /* HEADER H1 SETTINGS */
   --header-colour: #121212;
@@ -104,5 +104,15 @@ nav {
   #smallText {
     color: var(--header-smalltext-colour);
     font-size: var(--header-smalltext-size);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #introduction > * {
+    width: 75vw;
+  }
+
+  nav {
+    width: 65vw;
   }
 }
