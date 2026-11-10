@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 :root {
   /* HEADER BACKGROUND BLOB SETTINGS */
   --blob-radius: 250px;
@@ -22,17 +26,17 @@
   --header-intro-size: 4rem;
   --header-intro-font: ;
 
-  /* HEADER H1 GRADIENT SPAN SETTINGS */
-  --header-span-direction: to bottom right;
-  --header-span-colourfirst: darkblue;
-  --header-span-coloursecond: cyan;
+  /* H1 GRADIENT TEXT SETTINGS */
+  --text-gradient-direction: to bottom right;
+  --text-gradient-colourfirst: rgb(124, 238, 234);
+  --text-gradient-coloursecond: rgb(0, 191, 255);
 
   /* HEADER PARAGRAPH SETTINGS */
-  --header-paragraph-size: 1.3rem;
+  --header-paragraph-size: 1.5rem;
 
   /* HEADER SMALLTEXT SETTINGS */
-  --header-smalltext-size: 0.9rem;
-  --header-smalltext-colour: lightgrey;
+  --header-smalltext-size: 1.1rem;
+  --header-smalltext-colour: grey;
 }
 
 /*  Set header background */
@@ -43,11 +47,12 @@ header {
   background: var(--header-colour);
   color: var(--header-text-colour);
   height: 100vh;
+  user-select: none;
 }
 
 nav {
   display: flex;
-  background-color: black;
+  background-color: rgba(12, 12, 12, 70%);
   justify-content: center;
   width: 50vw;
   position: relative;
@@ -66,9 +71,18 @@ nav {
     font-size: 1.2rem;
   }
 
-  img {
+  object {
     height: 1.2rem;
     width: auto;
+  }
+
+  #active {
+    background: linear-gradient(var(--text-gradient-direction), var(--text-gradient-colourfirst), var(--text-gradient-coloursecond));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    text-decoration: underline wavy;
   }
 }
 
@@ -90,7 +104,7 @@ nav {
     font-size: var(--header-intro-size);
 
     span {
-      background: linear-gradient(var(--header-span-direction), var(--header-span-colourfirst), var(--header-span-coloursecond));
+      background: linear-gradient(var(--text-gradient-direction), var(--text-gradient-colourfirst), var(--text-gradient-coloursecond));
       -webkit-text-fill-color: transparent;
       background-clip: text;
       -webkit-background-clip: text; 
@@ -105,6 +119,41 @@ nav {
     color: var(--header-smalltext-colour);
     font-size: var(--header-smalltext-size);
   }
+
+  #introductionButtons {
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    justify-content: left;
+
+  
+    > * {
+      padding: 0.6rem;
+      margin-top: 2vh;
+      outline: white solid thin;
+
+      border-radius: 0.7rem;
+      font-size: 1.2rem;
+
+      text-decoration: none;
+      color: white;
+
+      img {
+        margin-left: 0.5vw;
+        height: 20px;
+      }
+    }
+
+    :hover {
+        background-color: #555555;
+        color: white;
+    }
+
+    :first-child {
+      background-color: white;
+      color: black;
+    }
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -114,5 +163,15 @@ nav {
 
   nav {
     width: 65vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #introduction > * {
+    width: 75vw;
+  }
+
+  nav {
+    width: 75vw;
   }
 }
