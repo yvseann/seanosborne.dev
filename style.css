@@ -95,8 +95,15 @@ nav img {
 }
 
 #smallText {
+    width: min(90%, 750px);
     font-size: clamp(0.8rem, 1.2vw, 1rem);
     color: darkgrey;
+    text-align: left;
+}
+
+#introductionButtons {
+    width: min(90%, 750px);
+    text-align: left;
 }
 
 @media (max-width: 600px) {
