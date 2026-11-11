@@ -7,10 +7,10 @@
 
 :root {
   /* HEADER BACKGROUND BLOB SETTINGS */
-  --blob-radius: 250px;
-  --blue-blob: #1900ff;
-  --purple-blob: #8800ff;
-  --red-blob: #ff0000;
+  --blob-one: #1900ff;
+  --blob-two: #8800ff;
+  --blob-three: #ff0000;
+  --blob-four: #ffc400;
 
   /* HEADER */
   --header-content-width: 55vw;
@@ -43,34 +43,42 @@ header {
   background: var(--header-colour);
   color: var(--header-text-colour);
   min-height: 100svh;
+  height: 100svh;
+  max-height: 100svh;
   user-select: none;
 
   background-image:
     radial-gradient(
       circle,
-      var(--blue-blob) 0%,
+      var(--blob-one) 0%,
       transparent 70%
     ),
     radial-gradient(
       circle,
-      var(--purple-blob) 0%,
+      var(--blob-two) 0%,
       transparent 70%
     ),
     radial-gradient(
       circle,
-      var(--red-blob) 0%,
+      var(--blob-three) 0%,
       transparent 70%
+    ),
+    radial-gradient(
+      circle,
+      var(--blob-four) 0%, transparent 70%
     );
 
   background-size:
     500px 500px,
     400px 400px,
-    350px 350px;
+    350px 350px,
+    550px 550px;
 
   background-position:
     10% 20%,
     90% 70%,
-    50% 100%;
+    50% 100%,
+    55% 50%;
 
   background-repeat: no-repeat;
 }
@@ -128,6 +136,8 @@ nav {
   align-items: center;
 
   min-height: 100svh;
+  height: 100svh;
+  max-height: 100svh;
   width: 100%;
 
   > * {
@@ -194,6 +204,7 @@ nav {
 
         transform: scale(1.05);
         gap: 15px;
+        margin-left: 1vw;
         margin-right: 1vw;
     }
 
