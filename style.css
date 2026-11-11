@@ -9,7 +9,6 @@
   /* Body Settings */
   --body-background-colour: #121212;
 
-
   /* HEADER BACKGROUND BLOB SETTINGS */
   --blob-one: #1900ffb9;
   --blob-two: #8800ff;
@@ -56,25 +55,10 @@ header {
   user-select: none;
 
   background-image:
-    radial-gradient(
-      circle,
-      var(--blob-one) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      circle,
-      var(--blob-two) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      circle,
-      var(--blob-three) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      circle,
-      var(--blob-four) 0%, transparent 70%
-    );
+    radial-gradient(circle, var(--blob-one) 0%, transparent 70%),
+    radial-gradient(circle, var(--blob-two) 0%, transparent 70%),
+    radial-gradient(circle, var(--blob-three) 0%, transparent 70%),
+    radial-gradient(circle, var(--blob-four) 0%, transparent 70%);
 
   background-size:
     500px 500px,
@@ -119,16 +103,24 @@ nav {
   }
 
   #active {
-    background: linear-gradient(var(--text-gradient-direction), var(--text-gradient-colourfirst), var(--text-gradient-coloursecond));
+    background: linear-gradient(
+      var(--text-gradient-direction),
+      var(--text-gradient-colourfirst),
+      var(--text-gradient-coloursecond)
+    );
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    
+
     text-decoration: underline wavy;
   }
 
   #active:hover {
-    background: linear-gradient(var(--text-gradient-direction), var(--text-gradient-coloursecond), var(--text-gradient-colourfirst));
+    background: linear-gradient(
+      var(--text-gradient-direction),
+      var(--text-gradient-coloursecond),
+      var(--text-gradient-colourfirst)
+    );
 
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -156,17 +148,25 @@ nav {
     font-size: var(--header-intro-size);
 
     span {
-      background: linear-gradient(var(--text-gradient-direction), var(--text-gradient-colourfirst), var(--text-gradient-coloursecond));
+      background: linear-gradient(
+        var(--text-gradient-direction),
+        var(--text-gradient-colourfirst),
+        var(--text-gradient-coloursecond)
+      );
       -webkit-text-fill-color: transparent;
       background-clip: text;
       -webkit-background-clip: text;
     }
 
-    span:hover{
-      background: linear-gradient(var(--text-gradient-direction), var(--text-gradient-coloursecond), var(--text-gradient-colourfirst));
+    span:hover {
+      background: linear-gradient(
+        var(--text-gradient-direction),
+        var(--text-gradient-coloursecond),
+        var(--text-gradient-colourfirst)
+      );
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      -webkit-background-clip: text; 
+      -webkit-background-clip: text;
     }
   }
 
@@ -182,10 +182,9 @@ nav {
   #introductionButtons {
     display: flex;
     flex-direction: row;
-    gap:10px;
+    gap: 10px;
     justify-content: left;
 
-  
     > * {
       padding: 0.6rem;
       margin-top: 2vh;
@@ -206,14 +205,14 @@ nav {
     }
 
     > *:hover {
-        background-color: #555555;
-        color: white;
-        outline: white thin dashed;
+      background-color: #555555;
+      color: white;
+      outline: white thin dashed;
 
-        transform: scale(1.05);
-        gap: 15px;
-        margin-left: 1vw;
-        margin-right: 1vw;
+      transform: scale(1.05);
+      gap: 15px;
+      margin-left: 1vw;
+      margin-right: 1vw;
     }
 
     :first-child {
@@ -230,27 +229,70 @@ nav {
   }
 }
 
-#featuredProjects {
-  display: block;
-  width: 100%;
-  margin-top: 5vh;
+.infoText {
+  display: flex;
+  width: 65vw;
+  flex-direction: column;
 
-  #introductionInfo {
-    display: flex;
-    flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  margin: 10svh auto 0svh auto;
 
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+  h2 {
+    text-align: left;
+    font-size: 2.3rem;
+  }
 
-    text-align: center;
+  p {
+    margin-top: 1vh;
+    color: rgb(205, 203, 203);
   }
 }
 
+#featuredProjects {
+  display: flex;
+  width: 75svw;
+  flex-direction: column;
 
+  align-items: center;
+  text-align: left;
 
+  margin: auto;
 
+  article {
+    padding: 1vh 0vw 1vh 0vw;
+    border: thin solid white;
+    border-radius: 1.5rem;
 
+    margin-top: 5svh;
+
+    &.inProgressProject {
+      border: 2px dashed rgb(124, 2328, 234);
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: auto;
+
+      width: 80%;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+    }
+
+    h4 {
+    }
+
+    hr {
+      border: thin dashed;
+      width: 110%;
+    }
+  }
+}
 
 @media only screen and (max-width: 650px) {
   #introduction > * {
@@ -269,7 +311,6 @@ nav {
 }
 
 @media only screen and (max-width: 450px) {
-
   nav {
     width: 95svw;
   }
@@ -293,7 +334,7 @@ nav {
 
     #introductionButtons {
       justify-content: center;
-      flex-direction:column;
+      flex-direction: column;
       gap: 0px;
     }
   }
