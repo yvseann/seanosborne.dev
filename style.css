@@ -44,6 +44,35 @@ header {
   color: var(--header-text-colour);
   min-height: 100svh;
   user-select: none;
+
+  background-image:
+    radial-gradient(
+      circle,
+      var(--blue-blob) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle,
+      var(--purple-blob) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle,
+      var(--red-blob) 0%,
+      transparent 70%
+    );
+
+  background-size:
+    500px 500px,
+    400px 400px,
+    350px 350px;
+
+  background-position:
+    10% 20%,
+    90% 70%,
+    50% 100%;
+
+  background-repeat: no-repeat;
 }
 
 nav {
