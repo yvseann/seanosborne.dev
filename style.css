@@ -6,6 +6,10 @@
 }
 
 :root {
+  /* Body Settings */
+  --body-background-colour: #121212;
+
+
   /* HEADER BACKGROUND BLOB SETTINGS */
   --blob-one: #1900ffb9;
   --blob-two: #8800ff;
@@ -16,7 +20,6 @@
   --header-content-width: 55vw;
 
   /* HEADER H1 SETTINGS */
-  --header-colour: #121212;
   --header-text-colour: white;
 
   --header-intro-size: 4rem;
@@ -24,7 +27,7 @@
 
   /* H1 GRADIENT TEXT SETTINGS */
   --text-gradient-direction: to bottom right;
-  --text-gradient-colourfirst: rgb(124, 238, 234);
+  --text-gradient-colourfirst: rgb(124, 2328, 234);
   --text-gradient-coloursecond: rgb(0, 191, 255);
 
   /* HEADER PARAGRAPH SETTINGS */
@@ -35,12 +38,17 @@
   --header-smalltext-colour: grey;
 }
 
+/* Body settings */
+body {
+  background-color: var(--body-background-colour);
+  color: white;
+}
+
 /*  Set header background */
 
 header {
   display: block;
   width: 100%;
-  background: var(--header-colour);
   color: var(--header-text-colour);
   min-height: 100svh;
   height: 100svh;
@@ -77,7 +85,7 @@ header {
   background-position:
     10% 20%,
     90% 70%,
-    50% 100%,
+    50% 92%,
     55% 50%;
 
   background-repeat: no-repeat;
@@ -87,7 +95,7 @@ nav {
   display: flex;
   background-color: rgba(12, 12, 12, 70%);
   justify-content: center;
-  width: min(50vw, 800px);
+  width: 35vw;
   position: relative;
   top: 1vh;
   padding: 1rem;
@@ -221,6 +229,28 @@ nav {
     }
   }
 }
+
+#featuredProjects {
+  display: block;
+  width: 100%;
+  margin-top: 5vh;
+
+  #introductionInfo {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    text-align: center;
+  }
+}
+
+
+
+
+
 
 @media only screen and (max-width: 650px) {
   #introduction > * {
