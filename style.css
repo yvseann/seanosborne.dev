@@ -233,11 +233,38 @@ nav {
 }
 
 @media only screen and (max-width: 500px) {
-  #introduction > * {
-    width: 75vw;
-  }
-
   nav {
     width: 75vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+
+  nav {
+    width: 95svw;
+  }
+
+  #introduction {
+    > * {
+      text-align: center;
+      width: 85svw;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    #smallText {
+      font-size: 0.9rem;
+    }
+
+    #introductionButtons {
+      justify-content: center;
+      flex-direction:column;
+      gap: 0px;
+    }
   }
 }
