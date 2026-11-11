@@ -7,10 +7,10 @@
 
 :root {
   /* HEADER BACKGROUND BLOB SETTINGS */
-  --blob-one: #1900ff;
+  --blob-one: #1900ffb9;
   --blob-two: #8800ff;
-  --blob-three: #ff0000;
-  --blob-four: #ffc400;
+  --blob-three: #27e9ff;
+  --blob-four: #0c702a;
 
   /* HEADER */
   --header-content-width: 55vw;
