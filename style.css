@@ -262,13 +262,14 @@ nav {
 
   article {
     padding: 1vh 0vw 1vh 0vw;
+    background-color: #08005b42;
     border: thin solid white;
     border-radius: 1.5rem;
 
     margin-top: 5svh;
 
     &.inProgressProject {
-      border: 2px dashed rgb(124, 2328, 234);
+      border: 2px dashed #000dc55f;
     }
 
     div {
@@ -282,15 +283,41 @@ nav {
 
     h3 {
       font-size: 1.7rem;
+      color: rgb(193, 9, 199);
     }
 
     h4 {
+      font-size: 1.1rem;
+      margin-bottom: 1svh;
     }
 
     hr {
       border: thin dashed;
       width: 110%;
     }
+  }
+
+  .languages {
+    display: flex;
+
+    flex-direction: row;
+    margin: 1svh 0 1svh 0;
+
+    span {
+      margin-right: 1svw;
+      padding: 0.2rem;
+      font-size: 1rem;
+      background-color: rgba(17, 148, 235, 0.289);
+
+      border-radius: 0.6rem;
+      border: 2px solid rgb(25, 25, 125);
+    }
+  }
+
+  .additionalText {
+    text-align: right;
+    color: white;
+    margin: auto;
   }
 }
 
